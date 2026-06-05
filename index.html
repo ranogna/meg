@@ -4,144 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday</title>
-  <style>
-    :root {
-      color-scheme: light;
-      color: #1f1a3d;
-      background: radial-gradient(circle at top, #ffe6f9 0%, #fff7f3 55%, #f4e5ff 100%);
-      font-family: Inter, system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
-    body { display: grid; place-items: center; padding: 20px; }
-    .card {
-      width: min(100%, 420px);
-      position: relative;
-      background: linear-gradient(180deg, #ffffffcc 0%, #fdf7ff 100%);
-      border: 1px solid rgba(158, 121, 194, 0.26);
-      border-radius: 32px;
-      box-shadow: 0 24px 70px rgba(126, 93, 174, 0.18);
-      overflow: hidden;
-      padding: 28px 24px 24px;
-      text-align: center;
-    }
-    .floating-tag {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: #ff5ca1;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 999px;
-      box-shadow: 0 14px 30px rgba(255, 92, 161, 0.22);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-    .message h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 7vw, 3.2rem);
-      line-height: 1.02;
-      color: #5f2f82;
-    }
-    .message p {
-      margin: 16px auto 0;
-      max-width: 28rem;
-      color: #5f4a7c;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-    .photo-card {
-      margin-top: 24px;
-      border-radius: 32px;
-      overflow: hidden;
-      background: #f7f0ff;
-      border: 1px solid rgba(158, 121, 194, 0.28);
-      padding: 18px;
-      display: grid;
-      gap: 16px;
-    }
-    .photo-frame {
-      background: radial-gradient(circle at top left, #ffd2f4 0%, #f6d5ff 40%, #f9efff 100%);
-      border-radius: 24px;
-      min-height: 220px;
-      display: grid;
-      place-items: center;
-      color: #7f4a9b;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 24px;
-      position: relative;
-    }
-    .photo-frame::before {
-      content: "🎂";
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      font-size: 2rem;
-    }
-    .photo-frame img {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-      object-fit: cover;
-      max-height: 320px;
-    }
-    .actions {
-      display: grid;
-      gap: 12px;
-    }
-    .actions a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: #ffffff;
-      background: linear-gradient(135deg, #9f4dff, #ff6bb4);
-      border-radius: 999px;
-      padding: 14px 18px;
-      font-weight: 700;
-      box-shadow: 0 16px 30px rgba(159, 77, 255, 0.16);
-    }
-    .note {
-      margin-top: 12px;
-      color: #7a5a99;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .confetti {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background-image: radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px);
-      background-size: 18px 18px;
-      opacity: 0.35;
-    }
-    @media (max-width: 360px) {
-      body { padding: 16px; }
-      .card { padding: 24px 18px 18px; }
-      .floating-tag { top: 12px; right: 12px; padding: 8px 14px; font-size: 0.85rem; }
-    }
-  
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="confetti"></div>
   <main class="card">
-    <div class="floating-tag">Happy Surprise!</div>
     <div class="message">
       <h1>Happy Birthday!</h1>
-      <p>Open this in your phone browser and enjoy a cheerful birthday greeting.</p>
     </div>
-    <section class="photo-card">
-      <div class="photo-frame">
-        <div>🎉 Your birthday message is ready!</div>
-      </div>
-      <div class="actions">
-        <a href="#">Send this page as a file</a>
-      </div>
-      <div class="note">If you want, I can also make this into a live website link that opens directly in any phone browser.</div>
-    </section>
+    <div class="photo-wrapper">
+      <img src="birthday.jpg" alt="Birthday celebration" class="photo" />
+    </div>
   </main>
 </body>
 </html>
